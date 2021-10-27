@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  list-style: none;
+}
+.link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 18px;
+}
+
+.link:hover {
+  color: red;
+}
+
+.activeLink {
+  composes: link;
+  color: #2196f3;
+}
