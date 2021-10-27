@@ -1,5 +1,5 @@
 .list {
-  display: flex;
+  /* display: flex; */
   list-style: none;
 }
 .link {
@@ -10,6 +10,10 @@
   color: #2a363b;
   font-size: 18px;
 }
+
+/* .link:last-child {
+  margin-left: 500px;
+} */
 
 .link:hover {
   color: red;

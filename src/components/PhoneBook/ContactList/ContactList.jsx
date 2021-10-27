@@ -2,9 +2,12 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import { ContactListItem } from '../ContactListItem/ContactListItem';
-import { getContacts, getFilter } from '../../redux/contacts-selectors';
-import * as contactsOperations from '../../redux/contacts-operations';
+import { ContactListItem } from '../../PhoneBook/ContactListItem/ContactListItem';
+import {
+  getContacts,
+  getFilter,
+} from '../../../redux/contacts/contacts-selectors';
+import * as contactsOperations from '../../../redux/contacts/contacts-operations';
 
 export function ContactList({ children }) {
   const contacts = useSelector(getContacts);

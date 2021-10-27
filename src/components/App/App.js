@@ -1,44 +1,34 @@
-import { useSelector } from 'react-redux';
 import { Switch, Route } from 'react-router-dom';
-import { Section } from '../Section/Section.jsx';
-import { InputForm } from '../InputForm/InputForm.jsx';
-import { Filter } from '../Filter/Filter.jsx';
-import { ContactList } from '../ContactList/ContactList.jsx';
-import { getContacts } from '../../redux/contacts-selectors';
+import Container from '../Continer/Container.jsx';
+import AppBar from '../AppBar/AppBar.jsx';
+import HomeView from '../../views/HomeView';
+import PhoneBook from '../PhoneBook/PhoneBook.jsx';
+import RegisterView from '../../views/RegisterView';
+import LoginView from '../../views/LoginView';
+
 import s from './App.module.css';
 
-import { Container } from '../Continer/Container.jsx';
-import { AppBar } from '../AppBar/AppBar.jsx';
-import { HomePage } from '../HomePage/HomePage.jsx';
-import { RegistrationForm } from '../RegistrationForm/RegistrationForm.jsx';
-
 export function App() {
-  const contacts = useSelector(getContacts);
-
   return (
     <>
       <Container>
         <AppBar />
-
         <Switch>
           <Route exact path="/">
-            <HomePage />
+            <HomeView />
+          </Route>
+
+          <Route path="/phonebook">
+            <PhoneBook />
           </Route>
 
           <Route path="/registration">
-            <RegistrationForm />
+            <RegisterView />
           </Route>
 
-          <Route></Route>
-          <Route></Route>
-
-          <div className={s.app}>
-            <Section title={'Phonebook'}>
-              <InputForm />
-
-              <ContactList>{contacts.length > 2 && <Filter />}</ContactList>
-            </Section>
-          </div>
+          <Route path="/login">
+            <LoginView />
+          </Route>
         </Switch>
       </Container>
     </>
