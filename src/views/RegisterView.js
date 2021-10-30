@@ -47,6 +47,7 @@ export default function RegisterView() {
         <label className={s.label}>
           Name
           <input
+            className={s.input}
             type="text"
             name="name"
             onChange={handleChange}
@@ -56,6 +57,7 @@ export default function RegisterView() {
         <label className={s.label}>
           Email
           <input
+            className={s.input}
             type="email"
             name="email"
             onChange={handleChange}
@@ -65,6 +67,7 @@ export default function RegisterView() {
         <label className={s.label}>
           Password
           <input
+            className={s.input}
             type="password"
             name="password"
             onChange={handleChange}

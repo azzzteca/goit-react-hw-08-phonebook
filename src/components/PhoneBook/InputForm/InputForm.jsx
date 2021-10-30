@@ -46,10 +46,11 @@ export function InputForm() {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
-      <label>
+    <form onSubmit={handleFormSubmit} className={s.form}>
+      <label className={s.label}>
         Name
         <input
+          className={s.input}
           onChange={inputChange}
           type="text"
           name="name"
@@ -59,9 +60,10 @@ export function InputForm() {
         />
       </label>
 
-      <label>
+      <label className={s.label}>
         Number
         <input
+          className={s.input}
           onChange={inputChange}
           type="tel"
           name="number"

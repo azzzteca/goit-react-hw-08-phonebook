@@ -36,18 +36,20 @@ export default function LoginForm() {
     <section className={s.section}>
       <h1>LOGIN FORM</h1>
       <form className={s.form} onSubmit={handleSubmit}>
-        <label>
+        <label className={s.label}>
           Email
           <input
+            className={s.input}
             type="email"
             name="email"
             onChange={handleChange}
             placeholder="email"
           />
         </label>
-        <label>
+        <label className={s.label}>
           Password
           <input
+            className={s.input}
             type="password"
             name="password"
             onChange={handleChange}

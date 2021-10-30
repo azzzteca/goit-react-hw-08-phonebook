@@ -8,6 +8,7 @@ import {
   getFilter,
 } from '../../../redux/contacts/contacts-selectors';
 import * as contactsOperations from '../../../redux/contacts/contacts-operations';
+import s from './ContactList.module.css';
 
 export function ContactList({ children }) {
   const contacts = useSelector(getContacts);
@@ -19,10 +20,10 @@ export function ContactList({ children }) {
   }, [dispatch]);
 
   return (
-    <div>
+    <section className={s.section}>
       <h2>Contacts</h2>
       {children}
-      <ul>
+      <ul className={s.list}>
         {!filter
           ? contacts.map(contact => (
               <li key={uuidv4()}>
@@ -37,7 +38,7 @@ export function ContactList({ children }) {
                 </li>
               ))}
       </ul>
-    </div>
+    </section>
   );
 }
 
