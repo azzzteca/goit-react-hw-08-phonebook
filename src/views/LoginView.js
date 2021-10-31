@@ -35,7 +35,7 @@ export default function LoginForm() {
   return (
     <section className={s.section}>
       <h1>LOGIN FORM</h1>
-      <form className={s.form} onSubmit={handleSubmit}>
+      <form className={s.form} onSubmit={handleSubmit} autoComplete="off">
         <label className={s.label}>
           Email
           <input
@@ -56,6 +56,7 @@ export default function LoginForm() {
             placeholder="password"
           />
         </label>
+
         <button type="submit">Login</button>
       </form>
     </section>
