@@ -51,7 +51,6 @@ export default function RegisterView() {
             type="text"
             name="name"
             onChange={handleChange}
-            placeholder="name"
           />
         </label>
         <label className={s.label}>
@@ -61,7 +60,6 @@ export default function RegisterView() {
             type="email"
             name="email"
             onChange={handleChange}
-            placeholder="email"
           />
         </label>
         <label className={s.label}>
@@ -71,7 +69,6 @@ export default function RegisterView() {
             type="password"
             name="password"
             onChange={handleChange}
-            placeholder="password"
           />
         </label>
         <button type="submit">Register</button>

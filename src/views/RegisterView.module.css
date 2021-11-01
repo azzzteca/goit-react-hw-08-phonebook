@@ -9,11 +9,9 @@
 .form {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   text-align: start;
   align-items: center;
   padding: 20px 50px;
-  border: 1px solid grey;
   width: 300px;
 }
 

@@ -43,7 +43,6 @@ export default function LoginForm() {
             type="email"
             name="email"
             onChange={handleChange}
-            placeholder="email"
           />
         </label>
         <label className={s.label}>
@@ -53,7 +52,6 @@ export default function LoginForm() {
             type="password"
             name="password"
             onChange={handleChange}
-            placeholder="password"
           />
         </label>
 
