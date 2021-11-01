@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import * as authOperations from '../redux/auth/auth-operations';
+import toast, { Toaster } from 'react-hot-toast';
 
 import s from './RegisterView.module.css';
 
@@ -73,6 +74,7 @@ export default function RegisterView() {
         </label>
         <button type="submit">Register</button>
       </form>
+      <Toaster />
     </section>
   );
 }
