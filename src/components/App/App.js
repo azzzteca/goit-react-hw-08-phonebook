@@ -28,28 +28,19 @@ export function App() {
       <AppBar />
       {!isFetchingCurrentUser && (
         <Switch>
-          <PublicRoute exact path="/goit-react-hw-08-phonebook/">
+          <PublicRoute exact path="/">
             <HomeView />
           </PublicRoute>
 
-          <PublicRoute
-            exact
-            path="/goit-react-hw-08-phonebook/registration"
-            restricted
-          >
+          <PublicRoute exact path="/registration" restricted>
             <RegisterView />
           </PublicRoute>
 
-          <PublicRoute
-            exact
-            path="/goit-react-hw-08-phonebook/login"
-            redirectTo="/goit-react-hw-08-phonebook/phonebook"
-            restricted
-          >
+          <PublicRoute exact path="/login" redirectTo="/phonebook" restricted>
             <LoginView />
           </PublicRoute>
 
-          <PrivateRoute path="/goit-react-hw-08-phonebook/phonebook">
+          <PrivateRoute path="/phonebook">
             <PhoneBook />
           </PrivateRoute>
         </Switch>
