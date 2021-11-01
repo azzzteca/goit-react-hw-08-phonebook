@@ -1,0 +1,5 @@
+.name {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 250px;
+}

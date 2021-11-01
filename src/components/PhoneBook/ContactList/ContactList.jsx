@@ -26,14 +26,14 @@ export function ContactList({ children }) {
       <ul className={s.list}>
         {!filter
           ? contacts.map(contact => (
-              <li key={uuidv4()}>
+              <li key={uuidv4()} className={s.item}>
                 <ContactListItem contact={contact} />
               </li>
             ))
           : contacts
               .filter(contact => contact.name.toLowerCase().includes(filter))
               .map(contact => (
-                <li key={contact.id}>
+                <li key={contact.id} className={s.item}>
                   <ContactListItem contact={contact} />
                 </li>
               ))}

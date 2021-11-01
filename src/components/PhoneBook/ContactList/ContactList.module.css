@@ -5,15 +5,8 @@
   text-align: center;
   margin-top: 50px;
 }
-/* .list {
-  background-color: red;
-  padding: 20px 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
 .list {
+  padding: 0;
   text-align: start;
 }
